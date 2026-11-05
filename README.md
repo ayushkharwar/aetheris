@@ -66,7 +66,7 @@ levelling without a single line of framework code.
 No build step, no install:
 
 ```sh
-git clone https://github.com/pixie-chan/aetheris.git
+git clone https://github.com/ayushkharwar/aetheris.git
 cd aetheris
 python3 -m http.server 8099
 ```
