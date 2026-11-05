@@ -103,7 +103,8 @@ plug in through one contract: define `GAME.ui.<Name>()` and the menu finds it.
 
 ## Testing
 
-Nine headless Chromium scripts, every one expected to report `PAGE ERRORS: none`:
+Nine headless scripts driven by Playwright. Eight assert and finish with
+`PAGE ERRORS: none`; `mapview.py` is a map viewer for debugging:
 
 | Script | Proves |
 |---|---|
