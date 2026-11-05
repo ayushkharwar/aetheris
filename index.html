@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetheris: Creature Chronicles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="viewport" class="viewport">
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <div id="battle-overlay" class="battle-overlay hidden"></div>
+
+    <div id="hud" class="hud">
+      <div class="hud-section">
+        <span id="hud-zone" class="hud-badge">Starter Meadow</span>
+        <span id="hud-coords" class="hud-text">X: 0 Y: 0</span>
+      </div>
+      <div class="hud-section">
+        <span id="hud-party-summary" class="hud-text">Party: 0/6</span>
+        <span id="hud-orbs" class="hud-text">Orbs: 5</span>
+        <span id="hud-gold" class="hud-text">G: 100</span>
+      </div>
+      <div class="hud-section">
+        <button id="btn-party" class="btn btn-small" type="button">Party [P]</button>
+        <button id="btn-bag" class="btn btn-small" type="button">Bag [B]</button>
+        <button id="btn-save" class="btn btn-small" type="button">Menu [Esc]</button>
+      </div>
+    </div>
+
+    <div id="dialog" class="dialog hidden" role="dialog" aria-live="polite">
+      <div class="dialog-header">
+        <span id="dialog-speaker" class="dialog-speaker">System</span>
+        <span id="dialog-prompt" class="dialog-prompt">[Space / Enter]</span>
+      </div>
+      <p id="dialog-text" class="dialog-text"></p>
+      <div id="dialog-choices" class="dialog-choices"></div>
+    </div>
+
+    <div id="menu" class="menu hidden" role="dialog" aria-modal="true">
+      <div class="menu-window">
+        <div class="menu-header">
+          <h2 id="menu-title" class="menu-title">Pause Menu</h2>
+          <button id="btn-menu-close" class="btn btn-danger btn-small" type="button">Close [Esc]</button>
+        </div>
+        <div class="menu-tabs">
+          <button id="tab-party" class="btn btn-tab active" type="button">Creatures</button>
+          <button id="tab-inventory" class="btn btn-tab" type="button">Inventory</button>
+          <button id="tab-dex" class="btn btn-tab" type="button">Bestiary</button>
+          <button id="tab-system" class="btn btn-tab" type="button">System</button>
+        </div>
+        <div id="menu-content" class="menu-content"></div>
+        <div id="menu-footer" class="menu-footer">
+          <span id="menu-status" class="hud-text">Use WASD or Arrow Keys to move.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/dex.js"></script>
+  <script src="js/panels.js"></script>
+</body>
+</html>
